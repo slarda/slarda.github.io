@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>solutionbehavior</title></head><body>
+<div style="text-align: center;">
+<h2>Evaluating Ligand Solution Behavior<br>
+</h2>
+<h3>(Minimizing False Positives in Binding Assays)</h3>
+<div style="text-align: justify;">While some will read the following and say that it is "<span style="font-weight: bold;">obvious!</span>",
+I have personally seen enough cases where the points discussed below
+were not "obvious" nor "trivial" and have seen the impact that ignoring
+them has on data interpretations in early stage drug discovery
+programs. Furthermore, few can presume to have a complete grasp of the
+complexity of solute behavior in aqueous solution (I am no exception,
+but have worked extensively on this topic, both academically and
+industrially). <br>
+<br>
+In the following writeup, however, I do hope to shed some light on some
+neglected points that have a big impact on interpretations and outcomes
+of biophysical and biochemical assays. <br>
+<br>
+So we begin...<br>
+<br>
+Arguably, <span style="text-decoration: underline;">one of the most important things to consider</span> when evaluating ligand binding to a drug target (protein or nucleic acid) <span style="font-weight: bold;">is to understand how the compound (drug, ligand) behaves in solution</span>.
+Failure to do so will unequivocally result in a higher number of false
+positives, confusing structure-activity-relationships (SAR), and
+ultimately wasted resources. <br>
+<br>
+Having tested 1000s of compounds for solution behavior for both
+internal and external clients (usually for medicinal chemistry and drug
+development programs), it is clear that there are more than a few
+underappreciated points regarding how a compound's solution properties
+can impact biophysical and biochemical assays (and thus drug discovery
+effiorts)<br>
+<br>
+Perceptions of the relative importance of these physicochemical
+properties varies greatly among the scientific community but the
+following is undoubdetly clear: <br>
+a) there is a vast underappreciation for the complexity of solute/drug/ligand solution behavior, and <br>
+b) even more neglected is how such complexity impacts functional and
+biophysical assays that are performed on a daily basis in labs,
+globally. <br>
+<br>
+So, what then are the important points?<br>
+<br>
+They are as follows:<br>
+1. <span style="font-weight: bold;">Solution behavior </span><span style="text-decoration: underline; font-weight: bold;">is much more than "solubility"</span> (e.g. solubility in mg/mL is only one of many parameters that should be considered)<br>
+2.<span style="font-weight: bold;"> </span><span style="font-family: Times New Roman,Times,serif; font-weight: bold;">Aggregation </span><span style="font-size: 11pt; line-height: 115%; font-family: Times New Roman,Times,serif; font-weight: bold;">&#8800; poor solubility</span>
+(There is a difference between "aggregation" and "precipitation").
+Precipitation implies some form of aggregation, but the converse is not
+true. <br>
+3. <span style="font-weight: bold;">Soluble aggregates exist! </span>Furthermore, they are common causes of false-positives<br>
+4. <span style="font-weight: bold;">Proteins and other binding partners can act like detergents</span> and de-aggregate aggregated compounds<br>
+5. <span style="font-weight: bold;">There are numerous types of drug (compound) aggregates</span> with variations in: size, stability, equilibria, kinetics. <br>
+6. <span style="font-weight: bold;">DLS and particle size measurements are not sufficient for aggregate detection and characterization!</span><br>
+7. <span style="font-weight: bold;">Some aggregates are colloidal
+suspensions, others are soluble, and many are small and transiently
+formed (having varying degrees of stability).</span><br>
+8.<span style="font-weight: bold;"> Detergents often do not "break" all aggregates</span>.
+In fact, few detergents are actually sufficient for complete
+"de-aggregation" and detergents have varying strengths for
+de-aggregation propensity. <br>
+9. <span style="font-weight: bold;">Aggregation, solubility, and solution behavior of a solute is buffer dependent</span>! <br>
+A solute will behave differently depending on the choice of buffer: Phosphate, Tris, Hepes, MES, Borate, Bis-Tris, etc. <span style="text-decoration: underline;">You cannot ("safely") extrapolate the results of a binding assay from one set of solution conditions to another!</span> <span style="font-style: italic;">Everyone does it; but if you love SAR, stop doing this. </span><br>
+10. <span style="font-weight: bold;">Additives are part of the buffer and have a huge impact on co-solute solution behavior</span>
+(glycerol, arginine, glycine, sorbitol, tween, etc.) If you change the
+composition of a buffer with an additive, you cannot assume that the
+results of a functional or biophysical assay will be the same as for a
+similar buffer (same buffer -additive). <br>
+11.<span style="font-weight: bold;"> How you prepare your solution (ligand in buffer) may impact its solution behavior.</span> <br>
+Do you add your solute to the buffer or buffer to the solute? Do you
+dissolve your ligand in a co-solvent before adding to the buffer? Be
+consistent <span style="font-style: italic;">(hard when the testing is
+handled by different groups, departments, or personnel eh? and while
+this might only impact a small fraction of compounds; when its a lead
+or related analog we are talking about, it doesn't sound like minutia
+anymore)</span>. <br>
+<br>
+For those that have made it this far, you might be saying: "So what do
+I do? Am I supposed to test my compound across all buffer and solution
+condition variations and permutations that are done throughout a
+discovery or development program?" <br>
+The answer is: Ideally yes, but in reality this is neither realistic, reasonable, nor practical. <br>
+It is almost guaranteed that at some point, a compound, drug lead, or
+drug product will end up being tested in some solution (cell culture,
+plasma, <span style="font-style: italic;">in vivo</span>) that is vastly different from <span style="font-style: italic;">in vitro</span> conditions. Does that mean we
+should conclude that because at some point, control over the conditions
+is lost, that we should not control for conditions at all in<span style="font-style: italic;"> vitro</span> stages? No, not at all. Doing so is a good way of spinning wheels at earlier stages of the program. <br>
+<br>
+So what then?<br>
+Well... you can apply the following:<br>
+<br>
+1. Set some conservative lower-limit thresholds that are well-below
+what you would need across all biochemical and biophysical assays.<br>
+If you have a biochemical assay that requires titrating ligand from a
+concentration of 0 uM to 1 mM and another biophysical assay that
+requires testing from 0 uM to 3 mM, you should ensure that your
+compound is well-behaved across that entire concentration range (0-3
+mM) and perhaps even 1.5-2X above the maximal concentration (more
+stringent conditions, the less likely for false positives). <br>
+2. Try <span style="font-style: italic;">(try even harder)</span> to
+use an identical buffer (same additives, same concentration, same pH,
+same conductivity, same everything) for all biophysical and biochemical
+assays. This one is a biggie! <br>
+3. Run your assays in triplicate.<br>
+4. Be consistent in the method of preparation for your samples.<br>
+5. Characterize the solution behavior of solutes and search for
+aggregate particles in your assay buffer prior to running any
+biochemical and biophysical assays. This is kind of obvious, but what
+is not obvious is what methods or techniques should be used?<br>
+DLS, Nephelometry, EM, HPLC, NMR, Diffusion? <br>
+<br>
+Ideally, we would have one method (technique) that could provide info
+on the following parameters, and one that allows you to measure these
+parameters rapidly, on the same sample, simultaneously:<br>
+<br>
+1. Accurate solubility measurement (e.g. ug/mL, mg/mL)<br>
+2. Identify or detect aggregates across a large range of sizes and types<br>
+3. Detects whether a compound is undergoing chemical exchange processes
+(aggregating or interacting with other species in solution)\<br>
+4. Can simultaneously evaluate purity<br>
+5. Can simultaneously evaluate structure (structure confirmation) <br>
+6. Can simultaenously evaluate stability <br>
+7. Can simultaneously identify multiple ligand conformers<br>
+8. Is sensitive across the range of concentrations that are necessary for all biophysical and biochemical assays. <br>
+9. Can directly observe at an atomic level each of the components of the system. <br>
+<br>
+You all know what technique this is... <br>
+<br>
+The article referenced below provides a summary of how <span style="font-weight: bold; text-decoration: underline;">NMR</span>
+can be used in a high-throughput manner to characterize solution
+behavior of ligands. This approach allows for screening of large
+compound libraries.&nbsp; While the article touches on some of the
+points mentioned above, keep in mind that the NMR method allows you to
+simultaneously monitor all parameters described in the list above. Just
+ask your friendly neighborhood NMR facility manager (or me) on how to
+get started - its easier than one might think.<br>
+<br>
+References:<br>
+<span class="docsum-authors full-authors">Ayotte Y, Marando VM, Vaillancourt L, Bouchard P, Heffron G, Coote PW,<b> Larda ST</b>, LaPlante SR.</span> <span class="docsum-journal-citation full-journal-citation">J Med Chem. (2019) 62(17):7885-7896.</span><br>
+<br>
+<br>
+<br>
+</div>
+<br>
+<br>
+
+
+</div>
+</body></html>
