@@ -105,7 +105,7 @@ Lets work with the following data, where x is in units of time (msec), and y is 
 </table>
 <br>
 If we plot the data above, we get the following:<br>
-<img src="../../../AppData/Local/Temp/moz-screenshot.jpg" alt=""><br>
+<img src="moz-screenshot.jpg" alt=""><br>
 <br>
 Looking at this data, we might recognize that it follows the general trend of exponential decay.<br>
 <br>
@@ -131,11 +131,11 @@ We don't know the value of <span style="font-weight: bold; font-style: italic;">
 The column "Model f(x)" is filled in by using the formula for f(x),
 where f(x)=a*exp(-x/b). The formula needs to reference the cells for
 values <span style="font-weight: bold; font-style: italic;">a</span> and <span style="font-weight: bold; font-style: italic;">b</span>, respectively. <br>
-<img src="../../../AppData/Local/Temp/moz-screenshot-2.jpg" alt=""><br>
+<img src="moz-screenshot-2.jpg" alt=""><br>
 <br>
 When we input the values of <span style="font-weight: bold; font-style: italic;">a</span> and <span style="font-weight: bold; font-style: italic;">b</span> in their respective places in the tool, the plot auto-updates and we get the following:<br>
 <br>
-<img src="../../../AppData/Local/Temp/moz-screenshot-3.jpg" alt=""><br>
+<img src="moz-screenshot-3.jpg" alt=""><br>
 We can see that the curve that describes the fitted model (blue curve)
 looks like it is starting to model the experimental data reasonably
 well but its not yet perfect. <br>
@@ -157,7 +157,7 @@ Below, we show the value of the sumSQ cell. Note how we input the
 entire range of cells for all of the residuals listed in the f(x)-y
 column. <br>
 <br>
-<img src="../../../AppData/Local/Temp/moz-screenshot-4.jpg" alt=""><br>
+<img src="moz-screenshot-4.jpg" alt=""><br>
 <br>
 Finally, to fit the model to the data we will try to vary the values of
 a and b such that the sumSQ is a minumum (minimize the difference
@@ -167,7 +167,7 @@ point).<br>
 We do this by using the "Solver" tool in Excel. <br>
 This is a built-in tool that can be found under the "Data" tab. <br>
 <br>
-<img src="../../../AppData/Local/Temp/moz-screenshot-5.jpg" alt=""><br>
+<img src="moz-screenshot-5.jpg" alt=""><br>
 <br>
 If the "Solver" button cannot be found in your version of Excel, you
 will need to go into the Options menu in Excel (File --&gt; Options
@@ -176,7 +176,7 @@ This should activate this tool. <br>
 <br>
 Now click the "Solver" button. This will open a window like the one shown below. <br>
 <br>
-<img src="../../../AppData/Local/Temp/moz-screenshot-11.jpg" alt=""><br>
+<img src="moz-screenshot-11.jpg" alt=""><br>
 <br>
 You need to Set the Objective as the "SumSQ" by selecting the cell containing the value of SumSQ. <br>
 We select the "min" radio button since we want to minimize the SumSQ value.<br>
@@ -186,7 +186,7 @@ Now click the "Solve" button.<br>
 <br>
 If everything worked correctly, you should see the following pop-up:<br>
 <br>
-<img src="../../../AppData/Local/Temp/moz-screenshot-13.jpg" alt=""><br>
+<img src="moz-screenshot-13.jpg" alt=""><br>
 <br>
 Select "Keep Solver Solution" and click "OK"<br>
 <br>
@@ -199,7 +199,7 @@ values of a and b should now represent very good approximations to the
 true values which best explain the experimental data.<br>
 <br>
 <br>
-<img src="../../../AppData/Local/Temp/moz-screenshot-14.jpg" alt=""><br>
+<img src="moz-screenshot-14.jpg" alt=""><br>
 <br>
 Using this approach, you can fit models to many types of experimental data!<br>
 <br>
