@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>non-linear_fit_excel</title></head><body>
+<div style="text-align: center;"><span style="font-weight: bold;">Fitting Experimental Data: Non-Linear Least Squares Fitting in Excel</span><br>
+<br>
+<div style="text-align: justify;">Arguably one of the most important tools for any STEM graduate is a general-purpose utility for fitting experimental data.<br>
+<br>
+Many programs exist (both commercial and free) that allow for
+non-linear fitting of data including: GraphPad Prism, Matlab, Maple,
+Wolfram Alpha, gnuplot, GNU Octave, and many, many more...<br>
+However, lets say that there is no budget for purchasing a pricey
+license for any of the commercial options and you don't need anything
+fancy above simply fitting your own equations to data. In that case why
+don't we build our own tool from one of the most ubiquitous pieces of
+software around - Microsoft Excel!<br>
+Note: If you don't have a license for Excel or are using Linux, you can download the open-source OpenOffice software instead. <br>
+<br>
+Many experiments performed in the lab will measure some change (or
+response) in a variable y (such as intensity) relative to some variable
+x (such as time).<br>
+<br>
+Lets work with the following data, where x is in units of time (msec), and y is the measured intensity of some response (arbitrary units)<br>
+
+ 
+<table style="border-collapse: collapse; width: 181px; height: 419px;" border="0" cellpadding="0" cellspacing="0">
+<col style="width: 48pt;" span="2" width="64">
+ <tbody><tr style="height: 15pt;" height="20">
+  <td class="xl63" style="height: 15pt; width: 48pt; text-align: center;" height="20" width="64">x (time)<br>
+</td>
+  <td class="xl63" style="border-left: medium none; width: 48pt; text-align: center;" width="64">y (intensity)<br>
+</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl64" style="border-top: medium none; height: 15pt; text-align: center;" height="20">0</td>
+  <td class="xl67" style="border-top: medium none; text-align: center;">100.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl65" style="height: 15pt; text-align: center;" height="20">50</td>
+  <td style="text-align: center;" class="xl68">95.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl65" style="height: 15pt; text-align: center;" height="20">100</td>
+  <td style="text-align: center;" class="xl68">83.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl65" style="height: 15pt; text-align: center;" height="20">150</td>
+  <td style="text-align: center;" class="xl68">73.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl65" style="height: 15pt; text-align: center;" height="20">200</td>
+  <td style="text-align: center;" class="xl68">65.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl65" style="height: 15pt; text-align: center;" height="20">250</td>
+  <td style="text-align: center;" class="xl68">60.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl65" style="height: 15pt; text-align: center;" height="20">300</td>
+  <td style="text-align: center;" class="xl68">52.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl65" style="height: 15pt; text-align: center;" height="20">350</td>
+  <td style="text-align: center;" class="xl68">48.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl65" style="height: 15pt; text-align: center;" height="20">400</td>
+  <td style="text-align: center;" class="xl68">40.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl65" style="height: 15pt; text-align: center;" height="20">450</td>
+  <td style="text-align: center;" class="xl68">38.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl65" style="height: 15pt; text-align: center;" height="20">500</td>
+  <td style="text-align: center;" class="xl68">36.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl65" style="height: 15pt; text-align: center;" height="20">550</td>
+  <td style="text-align: center;" class="xl68">32.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl65" style="height: 15pt; text-align: center;" height="20">600</td>
+  <td style="text-align: center;" class="xl68">29.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl65" style="height: 15pt; text-align: center;" height="20">650</td>
+  <td style="text-align: center;" class="xl68">26.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl65" style="height: 15pt; text-align: center;" height="20">700</td>
+  <td style="text-align: center;" class="xl68">24.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl65" style="height: 15pt; text-align: center;" height="20">750</td>
+  <td style="text-align: center;" class="xl68">22.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl65" style="height: 15pt; text-align: center;" height="20">800</td>
+  <td style="text-align: center;" class="xl68">20.0</td>
+ </tr>
+ <tr style="height: 15pt;" height="20">
+  <td class="xl66" style="height: 15pt; text-align: center;" height="20">850</td>
+  <td style="text-align: center;" class="xl69">19.0</td>
+ </tr>
+</tbody>
+</table>
+<br>
+If we plot the data above, we get the following:<br>
+<img src="../../../AppData/Local/Temp/moz-screenshot.jpg" alt=""><br>
+<br>
+Looking at this data, we might recognize that it follows the general trend of exponential decay.<br>
+<br>
+<br>
+<span style="font-weight: bold;">Model 1: General Exponential Decay</span><br>
+The equation for a general exponential decay function is:
+f(x)=a*exp(-x/b)&nbsp; where a is the starting intensity and b is the
+time constant (average lifetime)<br>
+<span style="font-weight: bold;"></span><br>
+<br>
+<span style="font-weight: bold; text-decoration: underline;">Building the Excel Tool for Model 1:</span><br>
+Below is a snapshot of the Excel tool.<br>
+On the left is the table of x and y values from the table above (raw experimental data)<br>
+In center is the plot of the experimental data and the fitted model (Model 1)<br>
+On the right is the equation for Model 1 (General Exponential Decay) along with the starting parameters <span style="font-weight: bold; font-style: italic;">a</span> and <span style="font-weight: bold; font-style: italic;">b</span>.<br>
+<br>
+To start out with, we have to make initial guesses for values of a and b.<br>
+Since we know a is the starting intensity, we can look at the first
+value of y in the table on the left and the y-value at x=0 is 100.
+Therefore, a good starting guess for <span style="font-weight: bold; font-style: italic;">a</span> is 100 (a = 100).<br>
+We don't know the value of <span style="font-weight: bold; font-style: italic;">b</span>, but thats ok since we will let the tool figure this out for us. We do still need to guess a starting value of <span style="font-weight: bold; font-style: italic;">b</span> though and a good guess is to pick any value of x close to the half-maximum intensity (say 400 msec). So our guess is b = 400.<br>
+<br>
+The column "Model f(x)" is filled in by using the formula for f(x),
+where f(x)=a*exp(-x/b). The formula needs to reference the cells for
+values <span style="font-weight: bold; font-style: italic;">a</span> and <span style="font-weight: bold; font-style: italic;">b</span>, respectively. <br>
+<img src="../../../AppData/Local/Temp/moz-screenshot-2.jpg" alt=""><br>
+<br>
+When we input the values of <span style="font-weight: bold; font-style: italic;">a</span> and <span style="font-weight: bold; font-style: italic;">b</span> in their respective places in the tool, the plot auto-updates and we get the following:<br>
+<br>
+<img src="../../../AppData/Local/Temp/moz-screenshot-3.jpg" alt=""><br>
+We can see that the curve that describes the fitted model (blue curve)
+looks like it is starting to model the experimental data reasonably
+well but its not yet perfect. <br>
+We want the blue curve to pass through each of the black data points.<br>
+To do this, we will use a least-squares minimum approach, where we
+subtract the value of the experimental intensity (y) from the fitted
+model f(x) at each value of x. <br>
+For example, our starting model says that the value of the intensity
+f(x) at x=0 is 100. The corresponding value of y at x=0 is also 100. So
+f(x)-y = 100-100 = 0. <br>
+We do this for each subsequent value of x. <br>
+So for x=50, f(x) = 88.2 and y = 95. Therefore, f(x)-y = 88.2 - 95 = -6.8. The value of -6.8 is the <span style="font-style: italic;">residual</span>. <br>
+<br>
+See how the values of f(x)-y are filled in on the table on the right of the plot? <br>
+We now take the SUM of the residuals and square the SUM. This gives us
+the Squared Sum of the Residuals. Using Excel, the command is =SUMSQ( )<br>
+<br>
+Below, we show the value of the sumSQ cell. Note how we input the
+entire range of cells for all of the residuals listed in the f(x)-y
+column. <br>
+<br>
+<img src="../../../AppData/Local/Temp/moz-screenshot-4.jpg" alt=""><br>
+<br>
+Finally, to fit the model to the data we will try to vary the values of
+a and b such that the sumSQ is a minumum (minimize the difference
+between the values of the model and the experimental data at each time
+point).<br>
+<br>
+We do this by using the "Solver" tool in Excel. <br>
+This is a built-in tool that can be found under the "Data" tab. <br>
+<br>
+<img src="../../../AppData/Local/Temp/moz-screenshot-5.jpg" alt=""><br>
+<br>
+If the "Solver" button cannot be found in your version of Excel, you
+will need to go into the Options menu in Excel (File --&gt; Options
+--&gt; Add-ins) and Load the "Solver Add-In".<br>
+This should activate this tool. <br>
+<br>
+Now click the "Solver" button. This will open a window like the one shown below. <br>
+<br>
+<img src="../../../AppData/Local/Temp/moz-screenshot-11.jpg" alt=""><br>
+<br>
+You need to Set the Objective as the "SumSQ" by selecting the cell containing the value of SumSQ. <br>
+We select the "min" radio button since we want to minimize the SumSQ value.<br>
+We are minimizing SumSQ by changing the variables <span style="font-style: italic; font-weight: bold;">a</span> and <span style="font-weight: bold; font-style: italic;">b</span> (fitted parameters). <br>
+<br>
+Now click the "Solve" button.<br>
+<br>
+If everything worked correctly, you should see the following pop-up:<br>
+<br>
+<img src="../../../AppData/Local/Temp/moz-screenshot-13.jpg" alt=""><br>
+<br>
+Select "Keep Solver Solution" and click "OK"<br>
+<br>
+Doing so will update the plot and the values of <span style="font-weight: bold; font-style: italic;">a</span> and <span style="font-weight: bold; font-style: italic;">b</span> in the table.<br>
+<br>
+We can see that the blue curve describing our fitted model is in much
+better agreement with the experimental data points once we have
+completed the minimization of sumSQ (minimized the residuals). The
+values of a and b should now represent very good approximations to the
+true values which best explain the experimental data.<br>
+<br>
+<br>
+<img src="../../../AppData/Local/Temp/moz-screenshot-14.jpg" alt=""><br>
+<br>
+Using this approach, you can fit models to many types of experimental data!<br>
+<br>
+</div>
+
+
+</div>
+</body></html>
